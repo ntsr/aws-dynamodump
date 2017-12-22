@@ -1,2 +1,4 @@
 dump/
 conf
+*.tar.gz
+*.zip

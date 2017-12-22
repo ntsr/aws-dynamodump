@@ -6,8 +6,10 @@ echo '--accessKey' ${AWS_ACCESS_KEY_ID}
 echo '--secretKey' ${AWS_SECRET_ACCESS_KEY}
 echo '-s' "${SRCTABLE}"
 
+DESTDIR='./dump'
 rm -rf ${DESTDIR}
 mkdir ${DESTDIR}
+
 docker run --rm -v $(pwd)/dump:/dump -t dynamodump:latest \
 python dynamodump.py \
 -m backup \
