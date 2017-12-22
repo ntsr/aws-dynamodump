@@ -4,7 +4,7 @@
 echo '-r' ${AWS_REGION}
 echo '--accessKey' ${AWS_ACCESS_KEY_ID}
 echo '--secretKey' ${AWS_SECRET_ACCESS_KEY}
-echo '-s' ${SRCTABLE}
+echo '-s' "${SRCTABLE}"
 
 rm -rf ${DESTDIR}
 mkdir ${DESTDIR}
@@ -14,4 +14,4 @@ python dynamodump.py \
 -r ${AWS_REGION} \
 --accessKey ${AWS_ACCESS_KEY_ID} \
 --secretKey ${AWS_SECRET_ACCESS_KEY} \
--s ${SRCTABLE}
+-s "${SRCTABLE}"
