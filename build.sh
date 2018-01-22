@@ -1,4 +1,5 @@
 #!/bin/bash
 
 TAG=dynamodump:latest
-docker build -t ${TAG} .
+docker pull amazonlinux:latest
+docker build -t ${TAG}  --no-cache .
