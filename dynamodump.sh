@@ -17,3 +17,6 @@ python dynamodump.py \
 --accessKey ${AWS_ACCESS_KEY_ID} \
 --secretKey ${AWS_SECRET_ACCESS_KEY} \
 -s "${SRCTABLE}"
+
+date=`date '+%Y%m%d_%H%M%S'`
+tar zcvf dump_${date}.tar.gz ./dump
